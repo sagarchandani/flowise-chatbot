@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FlowiseAI API Demo</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <script type="module">
+      import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js";
+      Chatbot.init({
+        // chatflowid: "e8a81b06-cbb8-4d88-96e9-b00b44766469",
+        chatflowid: "050ed01b-2886-4894-b282-e5026a6e61f8",
+        apiHost: "http://localhost:3000",
+        theme: {
+          button: {
+            backgroundColor: "#dc2626",
+          },
+          chatWindow: {
+            userMessage: {
+              backgroundColor: "#dc2626",
+            },
+            textInput: {
+              sendButtonColor: "#dc2626",
+            },
+          },
+        },
+      });
+    </script>
+    <div id="container" class="container mx-auto px-4 max-w-4xl">
+      <header class="flex justify-between py-6">
+        <div style="width: 200px">
+          <img src="/images/logo.png" alt="logo" />
+        </div>
+        <nav class="flex">
+          <ul class="flex gap-4 items-center text-md font-semibold">
+            <li><a href="#">Current</a></li>
+            <li><a href="#">Savings</a></li>
+            <li><a href="#">Loans</a></li>
+            <li><a href="#">Investments</a></li>
+            <li><a href="#">Insurance</a></li>
+            <li><a href="#">Cards</a></li>
+            <li>
+              <button
+                class="border border-red-600 py-2 px-4 text-red-600 self-start hover:opacity-80 hover:bg-red-600 hover:text-white text-md"
+                href="#"
+              >
+                Sign In
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <hr />
+      <!-- Hero Section -->
+      <section class="py-6 grid grid-cols-2 items-center gap-2">
+        <div class="flex flex-col gap-2">
+          <h1 class="text-6xl font-extrabold text-neutral-600">
+            Welcome to
+            <span class="text-red-600 uppercase">Virgin Money</span>
+          </h1>
+          <h2 class="text-2xl font-semibold text-neutral-600">
+            We're not like other banks. Discover what makes us different.
+          </h2>
+          <a
+            class="border py-2 px-4 rounded-xl bg-red-600 text-white self-start hover:opacity-80 text-lg"
+            href="#featured"
+          >
+            Browse Products
+          </a>
+        </div>
+        <div>
+          <div class="overflow-hidden rounded-2xl">
+            <img src="/images/hero.jpg" alt="hero" />
+          </div>
+        </div>
+      </section>
+      <!-- Featured -->
+      <section
+        class="py-10 px-10 mb-6 bg-red-600 rounded-xl"
+        id="featured"
+        name="featured"
+      >
+        <h3 class="pb-4 text-2xl text-white">
+          No-nonsense products we're proud of
+        </h3>
+        <h3 class="pb-4 text-md text-white">
+          When it comes to banking, you want an honest deal with no surprises.
+          So we'll always tell you the things you really need to know up front.
+        </h3>
+
+        <!-- list of products -->
+        <ul class="grid grid-cols-2 items-center gap-4">
+          <li
+            class="p-4 bg-neutral-100 rounded-xl hover:cursor-pointer flex flex-col gap-4"
+          >
+            <div class="h-32 overflow-hidden rounded-xl">
+              <img
+                class="w-full h-full object-cover bg-red-600"
+                src="/images/a.png"
+                alt=""
+              />
+            </div>
+            <h4 class="text-lg font-semibold">Current Accounts</h4>
+            <p class="text-sm">
+              Get more for your money with the M Plus Account. No monthly fee.
+              You'll need to be over 18 and a UK resident to apply online. Check
+              out all the terms, tariff and other important information.
+            </p>
+            <button
+              class="border py-2 px-4 rounded-xl bg-red-600 text-white self-start hover:opacity-80 text-xs"
+              href="#"
+            >
+              Learn more
+            </button>
+          </li>
+
+          <li
+            class="p-4 bg-neutral-100 rounded-xl hover:cursor-pointer flex flex-col gap-4"
+          >
+            <div class="h-32 overflow-hidden rounded-xl">
+              <img
+                class="w-full h-full object-cover bg-purple-600"
+                src="/images/b.png"
+                alt=""
+              />
+            </div>
+            <h4 class="text-lg font-semibold">Savings Accounts</h4>
+            <p class="text-sm">
+              Discover a wide world of interest-paying products and watch your
+              cash grow. We're covered by the Financial Services Compensation
+              Scheme. Savings with Virgin Money are covered up to £85,000 per
+              person.
+            </p>
+            <button
+              class="border py-2 px-4 rounded-xl bg-red-600 text-white self-start hover:opacity-80 text-xs"
+              href="#"
+            >
+              Learn more
+            </button>
+          </li>
+
+          <li
+            class="p-4 bg-neutral-100 rounded-xl hover:cursor-pointer flex flex-col gap-4"
+          >
+            <div class="h-32 overflow-hidden rounded-xl">
+              <img
+                class="w-full h-full object-cover"
+                src="/images/c.png"
+                alt=""
+              />
+            </div>
+            <h4 class="text-lg font-semibold">Loans</h4>
+
+            <p class="text-sm">
+              It's flexible - existing customers can borrow £1,000 - £35,000 and
+              repay over one to five years. Or, if you're borrowing £7,500 or
+              more you may have the option to repay up to seven years.
+            </p>
+            <button
+              class="border py-2 px-4 rounded-xl bg-red-600 text-white self-start hover:opacity-80 text-xs"
+              href="#"
+            >
+              Learn more
+            </button>
+          </li>
+
+          <li
+            class="p-4 bg-neutral-100 rounded-xl hover:cursor-pointer flex flex-col gap-4"
+          >
+            <div class="h-32 overflow-hidden rounded-xl">
+              <img
+                class="w-full h-full object-cover"
+                src="/images/d.png"
+                alt=""
+              />
+            </div>
+            <h4 class="text-lg font-semibold">Cards</h4>
+
+            <p class="text-sm">
+              Putting all our cards on the table. Whatever credit card you need,
+              we've got a great pack to pick from. Our checker is a quick way to
+              see your chances of being accepted for a card, and it won't affect
+              your credit rating.
+            </p>
+            <button
+              class="border py-2 px-4 rounded-xl bg-red-600 text-white self-start hover:opacity-80 text-xs"
+              href="#"
+            >
+              Learn more
+            </button>
+          </li>
+        </ul>
+      </section>
+      <!-- Footer -->
+      <footer
+        class="py-6 items-center gap-2 bg-[#1E2332] text-white p-10 rounded-t-xl"
+      >
+        <div class="grid grid-cols-4 mb-10">
+          <div class="row">
+            <div class="col-sm-6 col-md-3">
+              <h3 class="font-semibold text-2xl mb-5">Get in touch</h3>
+              <ul class="hover:cursor-pointer">
+                <li class="mb-5">Contact us</li>
+                <li class="mb-5">Help & support</li>
+                <li>Feedback</li>
+              </ul>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6 col-md-3">
+              <h3 class="font-semibold text-2xl mb-5">About us</h3>
+              <ul class="hover:cursor-pointer">
+                <li class="mb-5">Careers</li>
+                <li class="mb-5">Corporate</li>
+                <li>Newsroom</li>
+              </ul>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6 col-md-3">
+              <h3 class="font-semibold text-2xl mb-5">Information</h3>
+              <ul class="hover:cursor-pointer">
+                <li class="mb-5">Accessibility</li>
+                <li class="mb-5">Terms of use</li>
+                <li>Privacy policy</li>
+              </ul>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6 col-md-3">
+              <h3 class="font-semibold text-2xl mb-5">The Virgin Group</h3>
+              <ul class="hover:cursor-pointer">
+                <li class="mb-5">Virgin Money - Australia</li>
+                <li class="mb-5">Virgin.com</li>
+                <li>Virgin Atlantic</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div>
+          <img src="/images/footer.png" alt="footer" />
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
